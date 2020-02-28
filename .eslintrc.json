@@ -1,34 +1,37 @@
 {
-    "env": {
+  "env": {
       "browser": true,
-      "jquery": true
-    },
-    "extends": "eslint:recommended",
-    "rules": {
+      "commonjs": true,
+      "es6": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+      "ecmaVersion": 2018
+  },
+  "rules": {
       "indent": [
-        "error",
-        2,
-        {
-          "SwitchCase": 1,
-          "VariableDeclarator": {"var": 2, "let": 2, "const": 3}
-        }
+          "error",
+          2,
+          {
+            "SwitchCase": 1,
+            "VariableDeclarator": {"var": 2, "let": 2, "const": 3}
+          }
       ],
       "linebreak-style": [
-        "error",
-        "unix"
+          "error",
+          "windows"
       ],
       "quotes": [
-        "error",
-        "single"
+          "error",
+          "single"
       ],
       "semi": [
-        "error",
-        "always"
-      ],
-      "no-console": [
-        "error",
-        { "allow": ["error"] }
+          "error",
+          "always"
       ]
-    }
   }
-  
+}
